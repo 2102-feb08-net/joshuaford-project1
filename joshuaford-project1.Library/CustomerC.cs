@@ -74,5 +74,47 @@ namespace joshuaford_project1.Library
             return _custID;
         }
 
+        /// <summary>
+        /// Passes the customer ID to an SQL query to check if the ID exists
+        ///     in the customers database
+        /// </summary>
+        /// <param name="idToValidate"></param>
+        /// <returns> boolean idIsValid </returns>
+        public bool ValidateID(int idToValidate)
+        {
+            bool idIsValid = false;
+
+            using var context = new joshfordproject0Context(s_dbContextOptions);
+
+            if (idToValidate.Equals(context.Customers
+                .Select(x => x.CustomerId)
+                .Where(x => x.Equals(idToValidate))))
+            {
+                idIsValid = true;
+            }
+
+            return idIsValid;
+        }
+
+        /// <summary>
+        /// Passes the customer name to a validation function to check
+        ///     for spaces in the entered name
+        /// </summary>
+        /// <param name="idToValidate"></param>
+        /// <returns> boolean idIsValid </returns>
+        public bool ValidateName(string custName)
+        {
+            using var context = new joshfordproject0Context(s_dbContextOptions);
+
+            if (custName.Contains(" "))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
     }
 }

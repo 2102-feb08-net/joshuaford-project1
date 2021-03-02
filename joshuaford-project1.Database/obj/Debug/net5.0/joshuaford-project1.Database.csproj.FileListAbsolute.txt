@@ -12,3 +12,17 @@
 /Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/ref/joshuaford-project1.Database.dll
 /Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.pdb
 /Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.genruntimeconfig.cache
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/joshuaford-project1.Database.deps.json
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/joshuaford-project1.Database.runtimeconfig.json
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/joshuaford-project1.Database.runtimeconfig.dev.json
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/joshuaford-project1.Database.dll
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/ref/joshuaford-project1.Database.dll
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/bin/Debug/net5.0/joshuaford-project1.Database.pdb
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.GeneratedMSBuildEditorConfig.editorconfig
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.AssemblyInfoInputs.cache
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.AssemblyInfo.cs
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.csproj.CoreCompileInputs.cache
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.dll
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/ref/joshuaford-project1.Database.dll
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.pdb
+/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/Debug/net5.0/joshuaford-project1.Database.genruntimeconfig.cache

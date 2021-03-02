@@ -49,9 +49,6 @@ namespace joshuaford_project1.Library
         /// <param name="quantity"></param>
         public void AddProductToOrder(CoffeeTypes coffeeProduct, int quantity)
         {
-            Coffee coffee = new Coffee();
-            double coffeePrice = 0.00;
-
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
             IQueryable<Product> menu = context.Products
@@ -61,20 +58,12 @@ namespace joshuaford_project1.Library
             {
                 if (coffeeProduct.ToString().Equals(products.ProductName))
                 {
-                    coffeePrice = products.ProductPrice;
+                    productPrice = products.ProductPrice;
                 }
             }
 
-
-            /*
-            coffeePrice = double.Parse(context.Products
-                .Select(x => x.ProductPrice)
-                .Where(x => x.Equals(custCoffee))
-                .ToString());
-            */
-
             customerCoffee.Add(coffeeProduct);
-            AddToTotalOrderPrice(coffeePrice * quantity);
+            AddToTotalOrderPrice(productPrice * quantity);
         }
 
         /// <summary>
@@ -86,9 +75,6 @@ namespace joshuaford_project1.Library
         ///<param name="quantity"></param>
         public void AddProductToOrder(FoodTypes foodProduct, int quantity)
         {
-            Food food = new Food();
-            double foodPrice = 0.00;
-
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
             IQueryable<Product> menu = context.Products
@@ -98,12 +84,12 @@ namespace joshuaford_project1.Library
             {
                 if (foodProduct.ToString().Equals(products.ProductName))
                 {
-                    foodPrice = products.ProductPrice;
+                    productPrice = products.ProductPrice;
                 }
             }
 
             customerFood.Add(foodProduct);
-            AddToTotalOrderPrice(foodPrice * quantity);
+            AddToTotalOrderPrice(productPrice * quantity);
         }
 
         /// <summary>
@@ -113,12 +99,12 @@ namespace joshuaford_project1.Library
         {
             Console.WriteLine("\t--Customer's Current Order--");
 
-            foreach (int index in customerCoffee)
+            for (int index = 0; index < customerCoffee.Count; index++) 
             {
                 Console.WriteLine($"\t{customerCoffee[index]}\t");
             }
 
-            foreach (int index in customerFood)
+            for (int index = 0; index < customerFood.Count; index++)
             {
                 Console.WriteLine($"\t{customerFood[index]}\t");
             }
