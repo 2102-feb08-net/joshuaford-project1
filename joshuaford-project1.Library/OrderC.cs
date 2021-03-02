@@ -30,7 +30,10 @@ namespace joshuaford_project1.Library
         /// <summary>
         /// Retrieve the total order price of the given customers order
         /// </summary>
-        public double TotalOrderPrice { get; }
+        public double TotalOrderPrice()
+        {
+            return _currentOrderTotal;
+        }
 
         /// <summary>
         /// Add to the total order price of the given customers order
@@ -58,12 +61,12 @@ namespace joshuaford_project1.Library
             {
                 if (coffeeProduct.ToString().Equals(products.ProductName))
                 {
-                    productPrice = products.ProductPrice;
+                    this.productPrice = products.ProductPrice;
                 }
             }
 
-            customerCoffee.Add(coffeeProduct);
-            AddToTotalOrderPrice(productPrice * quantity);
+            this.customerCoffee.Add(coffeeProduct);
+            this.AddToTotalOrderPrice(productPrice * quantity);
         }
 
         /// <summary>
@@ -84,12 +87,12 @@ namespace joshuaford_project1.Library
             {
                 if (foodProduct.ToString().Equals(products.ProductName))
                 {
-                    productPrice = products.ProductPrice;
+                    this.productPrice = products.ProductPrice;
                 }
             }
 
-            customerFood.Add(foodProduct);
-            AddToTotalOrderPrice(productPrice * quantity);
+            this.customerFood.Add(foodProduct);
+            this.AddToTotalOrderPrice(productPrice * quantity);
         }
 
         /// <summary>
@@ -109,7 +112,7 @@ namespace joshuaford_project1.Library
                 Console.WriteLine($"\t{customerFood[index]}\t");
             }
 
-            Console.WriteLine($"Current Order Total:\t{TotalOrderPrice}");
+            Console.WriteLine($"Current Order Total:\t{TotalOrderPrice()}");
 
         }
 

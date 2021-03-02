@@ -109,11 +109,10 @@ namespace joshuaford_project1.ConsoleApp
             try
             {
                 string menuSelection;
-
+                OrderC order = new OrderC(customerID, employeeID, storeID);
                 do
                 {
                     // Customer UI Initiation
-                    OrderC order = new OrderC(customerID, employeeID, storeID);
                     Console.WriteLine("\t*******************");
                     Console.WriteLine("\t*   Order Menu    *");
                     Console.WriteLine("\t*******************");
@@ -162,6 +161,14 @@ namespace joshuaford_project1.ConsoleApp
                     }
 
                     order.PrintCurrentOrder();
+                    Console.WriteLine("\tIs this the correct order?");
+                    Console.WriteLine("\tY: Please Order\n\tN: Change Order");
+                    string correctOrder = Console.ReadLine().ToUpper();
+                    if(correctOrder == "Y")
+                    {
+                        order.PlaceOrder();
+                    }
+                    // Add ability to change order
 
                 } while (menuSelection != "E");
             }
