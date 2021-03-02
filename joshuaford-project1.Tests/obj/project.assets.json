@@ -148,6 +148,19 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.6",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.SqlServer/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -159,6 +172,20 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.1.6",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -2440,6 +2467,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "joshuaford-project1.Database": "1.0.0",
           "joshuaford-project1.Library": "1.0.0"
         },
@@ -2456,7 +2484,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6"
         },
         "compile": {
           "bin/placeholder/joshuaford-project1.Database.dll": {}
@@ -2472,6 +2501,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "joshuaford-project1.Database": "1.0.0"
         },
         "compile": {
@@ -2757,6 +2787,21 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.6": {
+      "sha512": "kz7C0Ddnge16NRf4CU8GygYxOor3+oQ797//eXI+xbKlJr2ighAEkno9gOipDlym4SiFtKNNuOuBI/BDBGD7Kg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational.design/1.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.design.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.SqlServer/5.0.3": {
       "sha512": "T0cU7999ffojbqEVF7nTp7IoSHrzo748BQRMSmmlmKC+uluQbV18GhtLLu3aOA5Egmja8gFEuN9+QZdViA0Dfw==",
       "type": "package",
@@ -2769,6 +2814,21 @@
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.5.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.6": {
+      "sha512": "nxdW1YfZtn3nbcFqIAbjo6vCbCNOx0g82qMv+9fTUsNTsW0KSENYc2pbjF3yO8ZqYdBjmx2gMfAGk6wjy5cldg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlserver.design/1.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.Design.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.Design.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.xml",
+        "microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.design.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -8089,6 +8149,7 @@
       "coverlet.collector >= 1.3.0",
       "joshuaford-project1.ConsoleApp >= 1.0.0",
       "joshuaford-project1.Database >= 1.0.0",
+      "joshuaford-project1.Library >= 1.0.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
     ]
@@ -8099,11 +8160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
+      "projectUniqueName": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
       "projectName": "joshuaford-project1.Tests",
-      "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
+      "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
       "packagesPath": "/Users/josh/.nuget/packages/",
-      "outputPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Tests/obj/",
+      "outputPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/josh/.config/NuGet/NuGet.Config"
@@ -8118,11 +8179,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.ConsoleApp/joshuaford-project1.ConsoleApp.csproj": {
-              "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.ConsoleApp/joshuaford-project1.ConsoleApp.csproj"
+            "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.ConsoleApp/joshuaford-project1.ConsoleApp.csproj": {
+              "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.ConsoleApp/joshuaford-project1.ConsoleApp.csproj"
             },
-            "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
-              "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj"
+            "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
+              "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj"
+            },
+            "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj": {
+              "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj"
             }
           }
         }

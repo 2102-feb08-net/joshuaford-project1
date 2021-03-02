@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {}
+    "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {}
   },
   "projects": {
-    "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
+    "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
+        "projectUniqueName": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
         "projectName": "joshuaford-project1.Database",
-        "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
+        "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
         "packagesPath": "/Users/josh/.nuget/packages/",
-        "outputPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/obj/",
+        "outputPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/josh/.config/NuGet/NuGet.Config"
@@ -55,6 +55,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [

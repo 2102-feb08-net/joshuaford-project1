@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DCm0fHSaRwPRIP3RQNVBuQLnaIemfVM87GHkhdnch4RtSbfgekefhczAN47g70x8qhbpUmcsxEeClnSk7C9CiA==",
+  "dgSpecHash": "6Bq2oB8HO18AAYK6wJ9168mKSluPufvR+MdkyLmYuDo0Fbl4JS70D9tUGZCIbIrg1Wi3mMM1yJ6Rv/GuLohJlw==",
   "success": true,
-  "projectFilePath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
+  "projectFilePath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Tests/joshuaford-project1.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/josh/.nuget/packages/coverlet.collector/1.3.0/coverlet.collector.1.3.0.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.codecoverage/16.7.1/microsoft.codecoverage.16.7.1.nupkg.sha512",
@@ -13,7 +13,9 @@
     "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.3/microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.3/microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.relational/5.0.3/microsoft.entityframeworkcore.relational.5.0.3.nupkg.sha512",
+    "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.relational.design/1.1.6/microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.sqlserver/5.0.3/microsoft.entityframeworkcore.sqlserver.5.0.3.nupkg.sha512",
+    "/Users/josh/.nuget/packages/microsoft.entityframeworkcore.sqlserver.design/1.1.6/microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.extensions.caching.abstractions/5.0.0/microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.extensions.caching.memory/5.0.0/microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "/Users/josh/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
