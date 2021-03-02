@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj": {}
+  },
+  "projects": {
+    "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
+        "projectName": "joshuaford-project1.Database",
+        "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj",
+        "packagesPath": "/Users/josh/.nuget/packages/",
+        "outputPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/josh/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj",
+        "projectName": "joshuaford-project1.Library",
+        "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj",
+        "packagesPath": "/Users/josh/.nuget/packages/",
+        "outputPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Library/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/josh/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
+                "projectPath": "/Users/josh/Revature/joshford-project1/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
