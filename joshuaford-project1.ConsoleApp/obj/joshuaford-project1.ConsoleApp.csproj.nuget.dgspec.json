@@ -31,6 +31,9 @@
               },
               "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj": {
                 "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj"
+              },
+              "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/joshuaford-project1.WebUI.csproj": {
+                "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/joshuaford-project1.WebUI.csproj"
               }
             }
           }
@@ -235,6 +238,82 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/joshuaford-project1.WebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/joshuaford-project1.WebUI.csproj",
+        "projectName": "joshuaford-project1.WebUI",
+        "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/joshuaford-project1.WebUI.csproj",
+        "packagesPath": "/Users/josh/.nuget/packages/",
+        "outputPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.WebUI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/josh/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj": {
+                "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Database/joshuaford-project1.Database.csproj"
+              },
+              "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj": {
+                "projectPath": "/Users/josh/Revature/joshuaford-project1/joshuaford-project1.Library/joshuaford-project1.Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

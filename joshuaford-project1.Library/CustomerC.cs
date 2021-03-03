@@ -92,6 +92,10 @@ namespace joshuaford_project1.Library
                     customerC._custID = idToValidate;
                 }
             }
+            if(!idIsValid)
+            {
+                
+            }
 
             return customerC;
         }
@@ -100,8 +104,8 @@ namespace joshuaford_project1.Library
         /// Passes the customer name to a validation function to check
         ///     for spaces in the entered name
         /// </summary>
-        /// <param name="idToValidate"></param>
-        /// <returns> boolean idIsValid </returns>
+        /// <param name="custName"></param>
+        /// <returns> bool </returns>
         public bool ValidateName(string custName)
         {
             if (custName.Contains(" "))

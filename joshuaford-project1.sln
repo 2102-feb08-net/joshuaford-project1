@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "joshuaford-project1.Library
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "joshuaford-project1.Database", "joshuaford-project1.Database\joshuaford-project1.Database.csproj", "{CDA5925F-0B00-4259-8F0F-4FADD77D7482}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "joshuaford-project1.WebUI", "joshuaford-project1.WebUI\joshuaford-project1.WebUI.csproj", "{A41171FF-7411-40BE-AF14-2DC699799340}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "joshuaford-project1.Tests", "joshuaford-project1.Tests\joshuaford-project1.Tests.csproj", "{F666F088-DD12-4542-B124-F34F27C5D04E}"
 EndProject
 Global

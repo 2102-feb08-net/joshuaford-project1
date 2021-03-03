@@ -19,5 +19,6 @@
   <ItemGroup>
     <ProjectReference Include="..\joshuaford-project1.Database\joshuaford-project1.Database.csproj" />
     <ProjectReference Include="..\joshuaford-project1.Library\joshuaford-project1.Library.csproj" />
+    <ProjectReference Include="..\joshuaford-project1.WebUI\joshuaford-project1.WebUI.csproj" />
   </ItemGroup>
 </Project>

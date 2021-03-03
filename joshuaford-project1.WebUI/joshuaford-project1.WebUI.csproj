@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>joshuaford_project1.UI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../joshuaford-project1.Database/joshuaford-project1.Database.csproj" />
+    <ProjectReference Include="../joshuaford-project1.Library/joshuaford-project1.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties/" />
+  </ItemGroup>
+
+</Project>
