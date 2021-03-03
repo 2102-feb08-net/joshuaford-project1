@@ -124,6 +124,21 @@ namespace joshuaford_project1.Library
         /// <returns> CoffeeType or FoodType enum </returns>
         public static Enum GetProductSelection(string customerSelection)
         {
+            /*
+            using var context = new joshfordproject0Context(s_dbContextOptions);
+
+            IQueryable<Product> products = context.Products
+                .OrderBy(x => x.ProductId);
+
+            foreach (Product product in products)
+            {
+                if (product.ProductId.Equals(customerSelection))
+                {
+                    
+                }
+            }
+            */
+
             switch (customerSelection)
             {
                 case "1":

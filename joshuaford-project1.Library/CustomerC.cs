@@ -18,13 +18,6 @@ namespace joshuaford_project1.Library
         // Constructor for new customer with no store id or records
         public CustomerC() { }
 
-        // Constructor for returning customer with customer and store id
-        public CustomerC(int custID)
-        {
-            _custID = custID;
-
-        }
-
         /// <summary>
         /// Get and set customer first name
         /// </summary>
@@ -57,9 +50,8 @@ namespace joshuaford_project1.Library
         /// </summary>
         public int AddNewCustomer(string custFirstName, string custLastName)
         {
-
-
             using var context = new joshfordproject0Context(s_dbContextOptions);
+
             var customer = new Customer
             {
                 CustomerFirstName = custFirstName,
@@ -80,20 +72,28 @@ namespace joshuaford_project1.Library
         /// </summary>
         /// <param name="idToValidate"></param>
         /// <returns> boolean idIsValid </returns>
-        public bool ValidateID(int idToValidate)
+        public CustomerC FindCustomerByID(int idToValidate)
         {
+            CustomerC customerC = new CustomerC();
             bool idIsValid = false;
 
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
-            if (idToValidate.Equals(context.Customers
-                .Select(x => x.CustomerId)
-                .Where(x => x.Equals(idToValidate))))
+            IQueryable<Customer> customerID = context.Customers
+                .OrderBy(x => x.CustomerId);
+
+            foreach (Customer customer in customerID)
             {
-                idIsValid = true;
+                if(idToValidate == customer.CustomerId)
+                {
+                    idIsValid = true;
+                    customerC._custFirstName = customer.CustomerFirstName;
+                    customerC._custLastName = customer.CustomerLastName;
+                    customerC._custID = idToValidate;
+                }
             }
 
-            return idIsValid;
+            return customerC;
         }
 
         /// <summary>
@@ -104,8 +104,6 @@ namespace joshuaford_project1.Library
         /// <returns> boolean idIsValid </returns>
         public bool ValidateName(string custName)
         {
-            using var context = new joshfordproject0Context(s_dbContextOptions);
-
             if (custName.Contains(" "))
             {
                 return false;
