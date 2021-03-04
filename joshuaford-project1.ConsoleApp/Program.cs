@@ -14,15 +14,12 @@ namespace joshuaford_project1.ConsoleApp
         public static void Main(string[] args)
         {
             // Let do this thing
-            bool validID = false;
             bool validResponse = false;
             string newOrReturn;
-            int menuOptions = 16;
-            int quantity = 1;
             string customerFirstName;
             string customerLastName;
             int customerID = 0; 
-            int employeeID = 0; 
+            int employeeID = 1; 
             int storeID = 1;
 
             // Database Connection is established
@@ -61,12 +58,7 @@ namespace joshuaford_project1.ConsoleApp
 
                 Console.WriteLine("Please enter customer ID: ");
                 customerID = int.Parse(Console.ReadLine());
-                do
-                {
-                    returnCustomer = returnCustomer.FindCustomerByID(customerID);
-
-                } while (!validID);
-                    
+                returnCustomer = returnCustomer.FindCustomerByID(customerID);
             }
 
             else
@@ -103,74 +95,8 @@ namespace joshuaford_project1.ConsoleApp
 
             try
             {
-                string menuSelection;
                 OrderC order = new OrderC(customerID, employeeID, storeID);
-                do
-                {
-                    // Customer UI Initiation
-                    Console.WriteLine("\t*******************");
-                    Console.WriteLine("\t*   Order Menu    *");
-                    Console.WriteLine("\t*******************");
-                    Console.WriteLine("\t*A: Add Item to Order\n\t*E: Exit");
-                    menuSelection = Console.ReadLine().ToUpper();
-                    while (menuSelection != "A" && menuSelection != "E")
-                    {
-                        Console.WriteLine("\tInvalid Menu Selection.");
-                        Console.WriteLine("\tPlease choose from the following:");
-                        Console.WriteLine("\t*A: Add Item to Order\n\t*E: Exit");
-                        menuSelection = Console.ReadLine().ToUpper();
-                    }
-
-                    if (menuSelection == "A")
-                    {
-                        Console.WriteLine("*******************");
-                        Console.WriteLine("*      Menu       *");
-                        Console.WriteLine("*******************");
-                        OrderC.PrintMenu();
-                        menuSelection = Console.ReadLine();
-                        while (menuOptions < int.Parse(menuSelection) && int.Parse(menuSelection) < 0)
-                        {
-                            Console.WriteLine("\tInvalid Menu Selection");
-                            Console.WriteLine("\tPlease select from the following:");
-                            OrderC.PrintMenu();
-                            menuSelection = Console.ReadLine();
-                        }
-                        Console.WriteLine("How many would you like?");
-                        quantity = int.Parse(Console.ReadLine());
-
-                        var productSelection = OrderC.GetProductSelection(menuSelection);
-                        if (productSelection.GetType().Equals((CoffeeTypes.Regular).GetType()))
-                        {
-                            order.AddProductToOrder((CoffeeTypes) productSelection, quantity);
-                        }
-                        else
-                        {
-                            order.AddProductToOrder((FoodTypes) productSelection, quantity);
-                        }
-
-                        order.PrintCurrentOrder();
-                    }
-                    else if(menuSelection == "E")
-                    {
-                        order.PrintCurrentOrder();
-                        Console.WriteLine("\tIs this the correct order?");
-                        Console.WriteLine("\tY: Please Order\n\tN: Change Order");
-                        string correctOrder = Console.ReadLine().ToUpper();
-                        if (correctOrder == "Y")
-                        {
-                            order.PlaceOrder();
-                        }
-                        // Add ability to change order
-
-                        Console.WriteLine("Thanks for stopping by!");
-                    }
-                    // Validation should prevent this
-                    else
-                    {
-                        Console.WriteLine("Applcation Closed due to validation error.");
-                    }
-
-                } while (menuSelection != "E");
+                Menu.MenuUI(order);
             }
             catch (ApplicationException)
             {

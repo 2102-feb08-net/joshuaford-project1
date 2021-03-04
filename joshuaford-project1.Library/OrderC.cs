@@ -87,12 +87,12 @@ namespace joshuaford_project1.Library
             {
                 if (foodProduct.ToString().Equals(products.ProductName))
                 {
-                    this.productPrice = products.ProductPrice;
+                    productPrice = products.ProductPrice;
                 }
             }
 
-            this.customerFood.Add(foodProduct);
-            this.AddToTotalOrderPrice(productPrice * quantity);
+            customerFood.Add(foodProduct);
+            AddToTotalOrderPrice(productPrice * quantity);
         }
 
         /// <summary>
@@ -194,26 +194,6 @@ namespace joshuaford_project1.Library
             }
 
             return NoProduct.Invalid;
-        }
-
-        /// <summary>
-        /// Print the store Menu
-        /// </summary>
-        public static void PrintMenu()
-        {
-            using var context = new joshfordproject0Context(s_dbContextOptions);
-
-            var totalMenuItems = context.Products.Select(x => x.ProductId).Max();
-            IQueryable<Product> menu = context.Products
-                .OrderBy(x => x.ProductName);
-            int menuLine = 1;
-
-            foreach (Product products in menu)
-            {
-                Console.WriteLine($"{menuLine}: {products.ProductName}\t${products.ProductPrice}");
-                menuLine++;
-            }
-            Console.WriteLine("\tMenu Choice:\n");
         }
 
         /// <summary>

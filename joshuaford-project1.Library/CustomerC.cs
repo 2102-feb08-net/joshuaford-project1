@@ -76,15 +76,23 @@ namespace joshuaford_project1.Library
         public CustomerC FindCustomerByID(int idToValidate)
         {
             CustomerC customerC = new CustomerC();
+            bool validID = false;
 
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
             Customer customerID = context.Customers
                 .Find(idToValidate);
 
-            customerC.CustFirstName = customerID.CustomerFirstName;
-            customerC.CustLastName = customerID.CustomerLastName;
-            customerC.CustID = idToValidate;
+            do
+            {
+                if (customerID != null)
+                {
+                    validID = true;
+                    customerC.CustFirstName = customerID.CustomerFirstName;
+                    customerC.CustLastName = customerID.CustomerLastName;
+                    customerC.CustID = idToValidate;
+                }
+            } while (!validID);
 
             return customerC;
         }
@@ -95,24 +103,17 @@ namespace joshuaford_project1.Library
 
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
-            try
-            {
-                IQueryable<Customer> customerNames = context.Customers
-                    .OrderBy(x => x.CustomerId);
+            IQueryable<Customer> customerNames = context.Customers
+                .OrderBy(x => x.CustomerId);
 
-                foreach (Customer customer in customerNames)
-                {
-                    if (customerFName == customer.CustomerFirstName && customerLName == customer.CustomerLastName)
-                    {
-                        customerC.CustFirstName = customer.CustomerFirstName;
-                        customerC.CustFirstName = customer.CustomerLastName;
-                        customerC.CustID = customer.CustomerId;
-                    }
-                }
-            }
-            catch (ArgumentNullException)
+            foreach (Customer customer in customerNames)
             {
-                throw new ArgumentNullException("Customer ID does not exist");
+                if (customerFName == customer.CustomerFirstName && customerLName == customer.CustomerLastName)
+                {
+                    customerC.CustFirstName = customer.CustomerFirstName;
+                    customerC.CustFirstName = customer.CustomerLastName;
+                    customerC.CustID = customer.CustomerId;
+                }
             }
 
             return customerC;
