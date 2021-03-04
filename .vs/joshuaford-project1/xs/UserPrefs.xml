@@ -1,20 +1,25 @@
 ﻿<Properties StartupConfiguration="{5649ED2C-FAA2-4313-8525-AF113C77C73E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="joshuaford-project1.WebUI/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="joshuaford-project1.Library/Menu.cs">
     <Files>
-      <File FileName="joshuaford-project1.ConsoleApp/Program.cs" Line="64" Column="82" />
-      <File FileName="joshuaford-project1.Library/OrderC.cs" />
-      <File FileName="joshuaford-project1.Library/CustomerC.cs" />
+      <File FileName="joshuaford-project1.ConsoleApp/Program.cs" Line="119" Column="46" />
+      <File FileName="joshuaford-project1.Library/OrderC.cs" Line="220" Column="54" />
+      <File FileName="joshuaford-project1.Library/CustomerC.cs" Line="87" Column="14" />
       <File FileName="joshuaford-project1.Library/EmployeeC.cs" />
       <File FileName="joshuaford-project1.Library/Food.cs" />
       <File FileName="joshuaford-project1.Library/Coffee.cs" />
-      <File FileName="joshuaford-project1.WebUI/Program.cs" Line="1" Column="1" />
+      <File FileName="joshuaford-project1.WebUI/Program.cs" />
       <File FileName="joshuaford-project1.WebUI/Startup.cs" Line="1" Column="1" />
+      <File FileName="joshuaford-project1.Library/Menu.cs" Line="2" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="joshuaford-project1" expanded="True">
-            <Node name="joshuaford-project1.Tests" selected="True" />
+            <Node name="joshuaford-project1.ConsoleApp" expanded="True" />
+            <Node name="joshuaford-project1.Library" expanded="True">
+              <Node name="Menu.cs" selected="True" />
+            </Node>
+            <Node name="joshuaford-project1.WebUI" expanded="True" />
           </Node>
         </State>
       </Pad>

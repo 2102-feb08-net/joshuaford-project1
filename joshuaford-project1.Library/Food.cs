@@ -36,7 +36,22 @@ namespace joshuaford_project1.Library
             FoodTypes foodInvCheck = (FoodTypes)productToCheck;
             int productAmount = 0;
 
-            // SQL Query for food inventory
+            IQueryable<Product> products = context.Products
+                .OrderBy(x => x.ProductName);
+
+            IQueryable<StoreInventory> productInventory = context.StoreInventories
+                .OrderBy(x => x.ProductId);
+
+            foreach (Product product in products)
+            {
+                foreach (StoreInventory storeInventory in productInventory)
+                {
+                    if(foodInvCheck.ToString().Equals(product.ProductName))
+                    {
+                        productAmount = storeInventory.ProductQuantity;
+                    }
+                }
+            }
 
             Console.WriteLine($"Current amount of {foodInvCheck} is: {productAmount}");
         }

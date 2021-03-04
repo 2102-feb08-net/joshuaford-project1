@@ -14,7 +14,7 @@ namespace joshuaford_project1.Library
         private double _currentOrderTotal = 0.00;
         private int _customerID;
         private int _employeeID;
-        private int _storeID;
+        private int _storeID = 1;
         private DateTime currentDate;
         static DbContextOptions<joshfordproject0Context> s_dbContextOptions = DataAccess_Library.DatabaseConnectionString();
 

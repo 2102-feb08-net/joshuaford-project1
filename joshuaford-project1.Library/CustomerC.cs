@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using joshuaford_project1.Database;
 using Microsoft.EntityFrameworkCore;
+using System.Threading;
 
 namespace joshuaford_project1.Library
 {
@@ -75,26 +76,43 @@ namespace joshuaford_project1.Library
         public CustomerC FindCustomerByID(int idToValidate)
         {
             CustomerC customerC = new CustomerC();
-            bool idIsValid = false;
 
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
-            IQueryable<Customer> customerID = context.Customers
-                .OrderBy(x => x.CustomerId);
+            Customer customerID = context.Customers
+                .Find(idToValidate);
 
-            foreach (Customer customer in customerID)
+            customerC.CustFirstName = customerID.CustomerFirstName;
+            customerC.CustLastName = customerID.CustomerLastName;
+            customerC.CustID = idToValidate;
+
+            return customerC;
+        }
+
+        public CustomerC FindCustomerByName(string customerFName, string customerLName)
+        {
+            CustomerC customerC = new CustomerC();
+
+            using var context = new joshfordproject0Context(s_dbContextOptions);
+
+            try
             {
-                if(idToValidate == customer.CustomerId)
+                IQueryable<Customer> customerNames = context.Customers
+                    .OrderBy(x => x.CustomerId);
+
+                foreach (Customer customer in customerNames)
                 {
-                    idIsValid = true;
-                    customerC._custFirstName = customer.CustomerFirstName;
-                    customerC._custLastName = customer.CustomerLastName;
-                    customerC._custID = idToValidate;
+                    if (customerFName == customer.CustomerFirstName && customerLName == customer.CustomerLastName)
+                    {
+                        customerC.CustFirstName = customer.CustomerFirstName;
+                        customerC.CustFirstName = customer.CustomerLastName;
+                        customerC.CustID = customer.CustomerId;
+                    }
                 }
             }
-            if(!idIsValid)
+            catch (ArgumentNullException)
             {
-                
+                throw new ArgumentNullException("Customer ID does not exist");
             }
 
             return customerC;

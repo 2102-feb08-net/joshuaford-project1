@@ -29,7 +29,10 @@ namespace joshuaford_project1.ConsoleApp
             using var context = new joshfordproject0Context(s_dbContextOptions);
 
             // User Interface implementation(html, css, js) will be added here
-            Console.WriteLine("n or s");
+            Console.WriteLine("\t**********************************");
+            Console.WriteLine("\t* Welcome to Rise 'N Grind Cafe! *");
+            Console.WriteLine("\t**********************************");
+            Console.WriteLine("\t*N: New Customer\n\t*S: Sign In");
 
             do
             {
@@ -55,19 +58,12 @@ namespace joshuaford_project1.ConsoleApp
             if (newOrReturn == "S")
             {
                 CustomerC returnCustomer = new CustomerC();
-                validID = false;
 
                 Console.WriteLine("Please enter customer ID: ");
                 customerID = int.Parse(Console.ReadLine());
                 do
                 {
                     returnCustomer = returnCustomer.FindCustomerByID(customerID);
-                    if (!validID)
-                    {
-                        Console.WriteLine("\tInvalid customer ID entered.");
-                        Console.WriteLine("\tPlease enter a valid customer ID: ");
-                        customerID = int.Parse(Console.ReadLine());
-                    }
 
                 } while (!validID);
                     
